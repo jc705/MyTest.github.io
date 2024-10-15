@@ -1,1 +1,0 @@
-window._CCSettings={platform:"web-mobile",groupList:["default"],collisionMatrix:[[true]],hasResourcesBundle:false,hasStartSceneBundle:false,remoteBundles:[],subpackages:[],launchScene:"db://assets/test.fire",orientation:"",jsList:["assets/scripts/tcplayer.v5.1.0.min.js","assets/scripts/web_TXLivePusher-2.1.1.min.js"]};
