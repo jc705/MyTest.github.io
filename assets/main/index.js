@@ -38410,7 +38410,7 @@ window.__require = function e(t, n, r) {
       onLoginFailed: function onLoginFailed() {
         var btnName1 = "\u786e\u5b9a";
         var msgCallback = function(btnName) {
-          if (cc.sys.isMobile) window.location.replace(wxShareURL); else {
+          if (cc.sys.isMobile) ; else {
             this.reconnectCount = 0;
             this.checkReconnect();
           }

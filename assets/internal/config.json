@@ -119,15 +119,5 @@
     "nativeBase": "native",
     "debug": true,
     "isZip": false,
-    "encrypted": false,
-    "versions": {
-        "import": [
-            "0967b326a",
-            "eef84"
-        ],
-        "native": [
-            "02delMVqdBD70a/HSD99FK",
-            "cea68"
-        ]
-    }
+    "encrypted": false
 }
