@@ -808,7 +808,7 @@ window.__require = function e(t, n, r) {
             _this.visibleTime = new Date().getTime();
             "mLogin" != cc.director.getScene()._name ? _this.scheduleOnce(function() {
               _this.isLobbyScene() || cc.log(">>>>>GameSocketGameSocketonEnterForeground");
-            }, isIphone() ? .15 : .012) : cc.sys.isMobile ? window.location.replace(wxShareURL) : cc.director.loadScene("mLogin");
+            }, isIphone() ? .15 : .012) : cc.sys.isMobile || cc.director.loadScene("mLogin");
           }
         });
       },
@@ -38751,9 +38751,7 @@ window.__require = function e(t, n, r) {
           if (1 == info.status) {
             var runningScene = C_Director.getScene();
             for (var i in runningScene.children) runningScene.children[i].zIndex == G_SYSTEMNOTICE_ZORDER_TAG && runningScene.removeChild(runningScene.children[i]);
-            var callback = function callback() {
-              window.location.replace(window.location.href);
-            };
+            var callback = function callback() {};
             cc.loader.loadRes("prefab/NoticeSystem", function(err, prefab) {
               var NoticeLayer = cc.instantiate(prefab);
               var noticeLayerJS = NoticeLayer.getComponent("NoticeSystem");
@@ -38817,7 +38815,7 @@ window.__require = function e(t, n, r) {
       },
       dealNotifyLuziInfo: function dealNotifyLuziInfo(netMsg) {},
       backLogin: function backLogin() {
-        cc.sys.isNative ? cc.game.restart() : window.location.replace(window.location.href);
+        cc.sys.isNative && cc.game.restart();
       },
       requestHorn: function requestHorn(message) {
         var cNetMsg = this.createNetMsg(1024, MSG_MAIN_LOGON_OTHER, MSG_ASS_LOGON_OTHER_SEND_HORN);
@@ -39575,7 +39573,7 @@ window.__require = function e(t, n, r) {
             } else if (14 == p.bHandleCode) {
               alert("\u8d26\u53f7\u4e0d\u5339\u914d \u79fb\u9664\u672c\u5730\u6570\u636e \u8bf7\u5237\u65b0");
               cc.sys.localStorage.removeItem("wechatArgs_" + G_PLATFORM_NAME);
-              cc.sys.isNative ? cc.game.restart() : window.location.replace(window.location.href);
+              cc.sys.isNative && cc.game.restart();
             }
           }.bind(this);
           var bMainID = MSG_MAIN_LOGON_REGISTER;
@@ -43687,13 +43685,7 @@ window.__require = function e(t, n, r) {
         window.username = this.theRequest.username;
         window.password = this.theRequest.password;
       },
-      replaceWxURL: function replaceWxURL() {
-        try {
-          window.location.replace(gameUrl);
-        } catch (e) {
-          cc.log(e);
-        }
-      },
+      replaceWxURL: function replaceWxURL() {},
       setZhangHaoLogin: function setZhangHaoLogin() {
         if (isDebug) {
           this.layoutType = LAYOUT_TYPE_LOGIN;
