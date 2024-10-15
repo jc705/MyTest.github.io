@@ -1,0 +1,52 @@
+[
+  1,
+  [
+    "1fa0d0037"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "handCard_3_1",
+      "rect": [
+        913,
+        938,
+        36,
+        21
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        36,
+        21
+      ],
+      "rotated": 1,
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,156 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.JsonAsset",
+      [
+        "_name",
+        "json"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "PrivateRoomConfig",
+      [
+        {
+          "desc": "经典玩法",
+          "gameIdx": 1,
+          "tab": [
+            {
+              "desc": "局数",
+              "name": "Count",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "8局",
+                "12局"
+              ]
+            },
+            {
+              "desc": "底注",
+              "name": "bPoint",
+              "num": 4,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "1",
+                "5",
+                "10",
+                "20"
+              ],
+              "valueList": [
+                1,
+                5,
+                10,
+                20
+              ]
+            },
+            {
+              "desc": "金币限制",
+              "name": "input",
+              "num": 2,
+              "selectType": 4,
+              "checkBoxModel": 1,
+              "customerDescColor": [
+                255,
+                35,
+                17
+              ],
+              "keyList": [
+                "mPoint",
+                "lPoint"
+              ],
+              "textDescList": [
+                "准入金币",
+                "下限金币"
+              ],
+              "inputRangeList": [
+                [
+                  1,
+                  100000
+                ],
+                [
+                  1,
+                  100000
+                ]
+              ]
+            },
+            {
+              "desc": "人数",
+              "name": "rs",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "2人",
+                "3人"
+              ],
+              "valueList": [
+                2,
+                3
+              ]
+            },
+            {
+              "desc": "炸弹奖励",
+              "name": "zd",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "5分",
+                "10分"
+              ],
+              "valueList": [
+                5,
+                10
+              ]
+            },
+            {
+              "desc": "高级选项",
+              "name": "gj",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "customerWidth": 360,
+              "textDescList": [
+                "炸弹不能带牌",
+                "四带三"
+              ]
+            },
+            {
+              "desc": "玩法",
+              "name": "zj",
+              "num": 2,
+              "selectType": 2,
+              "checkBoxModel": 2,
+              "customerWidth": 360,
+              "textDescList": [
+                "红桃10抓鸟",
+                "显示牌数"
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

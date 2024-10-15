@@ -1,0 +1,161 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.JsonAsset",
+      [
+        "_name",
+        "json"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "CardRoomConfig",
+      [
+        {
+          "desc": "经典玩法",
+          "gameIdx": 1,
+          "tab": [
+            {
+              "desc": "局数",
+              "name": "Count",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "8局",
+                "12局"
+              ]
+            },
+            {
+              "desc": "房费",
+              "name": "pay",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "房主支付",
+                "AA支付"
+              ]
+            },
+            {
+              "desc": "人数",
+              "name": "rs",
+              "num": 3,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "4人",
+                "3人",
+                "2人"
+              ],
+              "valueList": [
+                4,
+                3,
+                2
+              ]
+            },
+            {
+              "desc": "封顶",
+              "name": "fd",
+              "num": 3,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "4番",
+                "3番",
+                "2番"
+              ],
+              "valueList": [
+                4,
+                3,
+                2
+              ]
+            },
+            {
+              "desc": "玩法",
+              "name": "zm",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "customerWidth": 360,
+              "textDescList": [
+                "自摸加底",
+                "自摸加番"
+              ]
+            },
+            {
+              "desc": "",
+              "name": "fs",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "customerWidth": 360,
+              "textDescList": [
+                "三房",
+                "二房"
+              ],
+              "valueList": [
+                1,
+                0
+              ]
+            },
+            {
+              "desc": "",
+              "name": "qt",
+              "num": 3,
+              "selectType": 2,
+              "checkBoxModel": 2,
+              "defaultAllSelected": true,
+              "textDescList": [
+                "换三张",
+                "呼叫转移",
+                "比叫"
+              ],
+              "keyList": [
+                "qt_1",
+                "qt_5",
+                "qt_6"
+              ]
+            },
+            {
+              "desc": "",
+              "name": "wf",
+              "num": 3,
+              "selectType": 2,
+              "checkBoxModel": 2,
+              "textDescList": [
+                "幺九将对",
+                "门清中张",
+                "天地胡"
+              ],
+              "keyList": [
+                "qt_2",
+                "qt_3",
+                "qt_4"
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]
