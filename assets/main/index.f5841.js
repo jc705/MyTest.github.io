@@ -3351,6 +3351,7 @@ window.__require = function e(t, n, r) {
       };
       CanvasVideo.prototype.onClickQuitBtn = function() {
         txySdk_1.default.inst.stoplive();
+        window["LobbyCanvas"].hideLiveView();
       };
       CanvasVideo.prototype.onClickOpenBtn = function() {
         txySdk_1.default.inst.SwitchCamera(true);
@@ -36235,7 +36236,9 @@ window.__require = function e(t, n, r) {
         hallNodePrefab: cc.Prefab,
         userVideoPrefab: cc.Prefab,
         conNetNodePrefab: cc.Prefab,
-        Image_Bg: cc.Node
+        Image_Bg: cc.Node,
+        livePrefab: cc.Prefab,
+        _liveNode: cc.Node
       },
       onLoad: function onLoad() {
         window["LobbyCanvas"] = this;
@@ -36280,6 +36283,16 @@ window.__require = function e(t, n, r) {
           bgNode.width *= bgScale;
           bgNode.height *= bgScale;
         }
+      },
+      showLiveView: function showLiveView() {
+        if (null == this._liveNode) {
+          this._liveNode = cc.instantiate(this.livePrefab);
+          this._liveNode.parent = this.node;
+        }
+        this._liveNode.active = true;
+      },
+      hideLiveView: function hideLiveView() {
+        null != this._liveNode && (this._liveNode.active = false);
       }
     });
     cc._RF.pop();
@@ -56430,9 +56443,7 @@ window.__require = function e(t, n, r) {
         timeLabel: cc.Label,
         sp1: cc.SpriteFrame,
         sp2: cc.SpriteFrame,
-        labWait: cc.Label,
-        livePrefab: cc.Prefab,
-        _liveNode: cc.Node
+        labWait: cc.Label
       },
       onLoad: function onLoad() {
         GlobalEvent.instance.on("upload_sucess", this.onEvent_Upload, this);
@@ -56553,11 +56564,7 @@ window.__require = function e(t, n, r) {
         }
       },
       doButton_Event: function doButton_Event(event, param) {
-        if (void 0 == this._liveNode) {
-          this._liveNode = cc.instantiate(this.livePrefab);
-          this._liveNode.parent = this.node;
-        }
-        this._liveNode.active = true;
+        LobbyCanvas.showLiveView();
       }
     });
     cc._RF.pop();
@@ -60841,11 +60848,6 @@ window.__require = function e(t, n, r) {
         var _this = this;
         var info = window["UserInfoManager"].getMyInfo();
         var userID = "215102";
-        info && (userID = info.userID);
-        if (null == info && false) {
-          failCb && failCb();
-          return;
-        }
         ReqHttp_1.default.getPushStreamUrl({
           userID: userID
         }, function(res) {
@@ -60885,11 +60887,6 @@ window.__require = function e(t, n, r) {
         var _this = this;
         var info = window["UserInfoManager"].getMyInfo();
         var userID = "215102";
-        info && (userID = info.userID);
-        if (null == info && false) {
-          failCb && failCb();
-          return;
-        }
         var fun = function(url) {
           _this._player = _this._TCPlayer(_this._player_container_id, {
             sources: [ {
