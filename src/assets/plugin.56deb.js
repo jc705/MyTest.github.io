@@ -1,0 +1,1 @@
+cc.macro.ENABLE_TRANSPARENT_CANVAS = true;

@@ -1,0 +1,117 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.JsonAsset",
+      [
+        "_name",
+        "json"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "CardRoomConfig",
+      [
+        {
+          "desc": "经典玩法",
+          "gameIdx": 1,
+          "tab": [
+            {
+              "desc": "局数",
+              "name": "Count",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "8局",
+                "12局"
+              ]
+            },
+            {
+              "desc": "房费",
+              "name": "pay",
+              "num": 2,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "房主支付",
+                "AA支付"
+              ]
+            },
+            {
+              "desc": "人数",
+              "name": "rs",
+              "num": 1,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "textDescList": [
+                "4人"
+              ],
+              "valueList": [
+                4
+              ]
+            },
+            {
+              "desc": "玩法",
+              "name": "WanFa",
+              "num": 2,
+              "selectType": 2,
+              "checkBoxModel": 2,
+              "textDescList": [
+                "缺风门",
+                "红中变"
+              ]
+            },
+            {
+              "desc": "",
+              "name": "wanfa",
+              "num": 5,
+              "selectType": 2,
+              "checkBoxModel": 2,
+              "textDescList": [
+                "七对2番",
+                "清对8番",
+                "碰碰胡2番",
+                "清一色4番",
+                "清碰8番"
+              ]
+            },
+            {
+              "desc": "可选",
+              "name": "KeXuan",
+              "num": 5,
+              "selectType": 1,
+              "checkBoxModel": 1,
+              "customerCELL_NUM": 5,
+              "textDescList": [
+                "一马全中",
+                "2马",
+                "4马",
+                "6马",
+                "8马"
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

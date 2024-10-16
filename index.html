@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Cocos Creator | NewProject_1</title>
+  <title>偶ONE醉美城</title>
 
   <!--http://www.html5rocks.com/en/mobile/mobifying/-->
   <meta name="viewport"
@@ -27,8 +27,8 @@
   <meta name="360-fullscreen" content="true"/>
   
   <!-- force screen orientation on some browser -->
-  <meta name="screen-orientation" content=""/>
-  <meta name="x5-orientation" content="">
+  <meta name="screen-orientation" content="landscape"/>
+  <meta name="x5-orientation" content="landscape">
 
   <!--fix fireball/issues/3568 -->
   <!--<meta name="browsermode" content="application">-->
@@ -37,32 +37,28 @@
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
-  <link rel="stylesheet" type="text/css" href="style-mobile.25fc5.css"/>
+  <link rel="stylesheet" type="text/css" href="style-mobile.c07bf.css"/>
   <link rel="icon" href="favicon.8de18.ico"/>
 </head>
-<body>
-  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
-  <div id="splash">
-    <div class="progress-bar stripes">
-      <span style="width: 0%"></span>
-    </div>
-  </div>
+<body style="background-color:#000000;">
 
-<script src="src/settings.4eb87.js" charset="utf-8"></script>
-<script src="vconsole.min.bac6b.js"></script>
-<script src="main.43bd3.js" charset="utf-8"></script>
+<canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+
+<script src="src/settings.e396b.js" charset="utf-8"></script>
+<script src="main.bb08e.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="https://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+
+<script src="https://cdn-go.cn/cdn/vod-js-sdk-v6/latest/vod-js-sdk-v6.js"></script>
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+        window.selfCitySN=returnCitySN
+</script>
 
 <script type="text/javascript">
 (function () {
-    // open web debugger console
-    if (typeof VConsole !== 'undefined') {
-        window.vConsole = new VConsole();
-    }
-
+    var gameCanvas = document.getElementById('GameCanvas');
     var debug = window._CCSettings.debug;
-    var splash = document.getElementById('splash');
-    splash.style.display = 'block';
-
     function loadScript (moduleName, cb) {
       function scriptLoaded () {
           document.body.removeChild(domScript);
@@ -76,11 +72,15 @@
       document.body.appendChild(domScript);
     }
 
-    loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.577e1.js', function () {
+    // 加载引擎脚本
+    loadScript(debug ? 'cocos2d-js.ffaca.js' : 'cocos2d-js-min.js', function () {
+      // 是否开启了物理系统？
       if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
-        loadScript(debug ? 'physics.js' : 'physics-min.7f489.js', window.boot);
+         //加载物理系统脚本并启动引擎
+        loadScript(debug ? 'physics.js' : 'physics-min.js', window.boot);
       }
       else {
+        // 启动引擎
         window.boot();
       }
     });
