@@ -36246,7 +36246,6 @@ window.__require = function e(t, n, r) {
         cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT);
         frameSize.width > frameSize.height && cc.view.setFrameSize(frameSize.height, frameSize.width);
         this.resetSize(this.node);
-        this.showLiveView();
         return;
         var hallNode;
       },
